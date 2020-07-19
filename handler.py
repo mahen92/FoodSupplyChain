@@ -115,7 +115,13 @@ class FoodTransactionHandler(TransactionHandler):
                     # batchid = pa
                     # medicineDetails = payload_list[3:7]
                     PharmaState._manufacture(context, manufacturerName, medicineName, batchID, manufactureDate, expiryDate)
-
+                elif "foodEntry" in action:
+                    [foodID, data] = payload_list[1:]
+                    # manufacturerName = payload_list[1]
+                    # medicineName = payload_list[2]
+                    # batchid = pa
+                    # medicineDetails = payload_list[3:7]
+                    PharmaState._manufacture(context, foodID, data)
                 elif action == "giveTo":
                     manufacturerName = payload_list[1]
                     distributerName = payload_list[2]
