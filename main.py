@@ -8,7 +8,7 @@ from sawtooth_sdk.processor.exceptions import InvalidTransaction
 from sawtooth_sdk.processor.exceptions import InternalError
 from sawtooth_sdk.processor.core import TransactionProcessor
 from handler import PharmaTransactionHandler
-DEFAULT_URL = 'tcp://127.0.0.1:4004'
+DEFAULT_URL = 'tcp://localhost:8008'
 FAMILY_NAME = 'foodsupplychain'
 
 def main():
